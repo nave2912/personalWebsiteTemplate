@@ -45,17 +45,18 @@
 		var mobile = $('#phone').val();
 		alert(mobile);
 		var message = $('#sentmessage').val();
-			alert(message);
-			
-			var postCall = "https://captech2019user.azurewebsites.net/saveMessageDetails";
-		  $.post(postCall, {
-		  name : name,
-			email : email,
-			mobile : mobile,
-			message : message,
-		  },function(data) {
-		  var json = JSON.parse(data);
-		  })
+		alert(message);
+		var postCall = "https://messagedetails.azurewebsites.net/message/send";
+		 var jsonData = {"name" : name,"email" : email,"phone": mobile,"message":message};
+		$.ajax({
+	url: postCall,
+    type: "POST",
+    dataType: "json",
+    data: JSON.stringify(jsonData),
+    contentType: "application/json"
+}); 
+		alert("ajax call");
+
 		  });
 		  });
 </script>
@@ -113,7 +114,7 @@
     <section id="home" class="main-banner parallaxie" style="background: url('uploads/background.png')">
         <div class="heading">
             <h1>hello i'm Naveen Kumar Venkatachalam</h1>
-            <p>"Software Engineer"</p>
+            <p>"Cloud Solution Engineer"</p>
             <h3 class="cd-headline clip is-full-width">
 				<!-- <span>Lorem ipsum dolor sit amet </span> -->
 				<span class="cd-words-wrapper">
@@ -158,7 +159,7 @@
                     <div class="message-box">
                         <h2>About Naveen.</h2>
                         <p> I’m an cloud engineer who is passionate about developing end to end software product. I am passionate about Research and Development.I graduated from Rajalakshmi Engineering college in chennai. I’m currently working as a Software Engineer for Object Frontier India Private Limited.I’m obsessed with Learning,Teaching. </p>
-                        <a href="resume/NaveenKumar_Resume.pdf" class="sim-btn btn-hover-new" data-text="Download CV" download="NaveenKumar_Resume.pdf"><span>Download CV</span></a>
+                        <a href="resume/NaveenKumarResume.pdf" class="sim-btn btn-hover-new" data-text="Download CV" download="NaveenKumar_Resume.pdf"><span>Download CV</span></a>
                     </div>
                     <!-- end messagebox -->
                 </div>
@@ -432,13 +433,7 @@ App,Azure DataFactory,Azure WebApp,Azure Key vault,Azure Container Instance,Azur
                 <p>If you have any queries ,please send message</p>
             </div>
             <!-- end title -->
-
-			
-
-
-
-
-            <div class="row">
+ <div class="row">
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
