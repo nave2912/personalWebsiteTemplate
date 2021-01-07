@@ -7,7 +7,7 @@
 <!-- Mobile Metas -->
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!-- Site Metas -->
+<!-- Site Metas --> 
 <title>Naveen Kumar Venkatachalam</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -50,10 +50,6 @@
     return;
 }
 		var mobile = $('#phone').val();
-		 if (mobile==null || mobile=="" || isNaN(mobile)){  
-  alert( "Please provide a Mobile No in the format 123." );
-  return;  
-}
 		var message = $('#sentmessage').val();
 		alert(message);
 		var receiverEmail="mailto:naveenvenkatcs@gmail.com";
@@ -69,9 +65,7 @@
     data: JSON.stringify(jsonData),
     contentType: "application/json"
 }); 
-		
-
-		  });
+});
 		  });
 </script>
 </head>
@@ -373,7 +367,7 @@ App,Azure DataFactory,Azure WebApp,Azure Key vault,Azure Container Instance,Azur
                                 <p class="lead">Successfully migrated existing services to azure with azure devops on minimal time</p>
                             </div>
                             <div class="testi-meta">
-                                <h4>ISGN CORPORTATION</h4>
+                                <h4>Encora, Inc.</h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
@@ -507,10 +501,15 @@ App,Azure DataFactory,Azure WebApp,Azure Key vault,Azure Container Instance,Azur
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
+								 
                                 <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
+								
+                                <div class="col-md-6">
                                     <div id="success"></div>
                                     <button id="sendMessageButton" class="sim-btn btn-hover-new" data-text="send email" type="button">send email</button>
+                                </div>
+								 <div class="col-md-6">
+                                    <input type="reset" value="Reset">
                                 </div>
                             </div>
                         </form>
