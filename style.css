@@ -845,7 +845,8 @@ xclip
 .testimonial h4 {
     font-size: 18px;
     color: #333333;
-    padding: 13px 0 0;
+    padding-top: 13px;
+	padding-bottom: 25px;
 }
 
 .testimonial img {
